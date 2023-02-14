@@ -17,4 +17,3 @@ def getzone(geolist,i=0):
     ...
     
     return zone
- 

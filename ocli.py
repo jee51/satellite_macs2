@@ -28,7 +28,7 @@ from .geozone import EARTHDIR, GeoZone
 FCOVERDIR = ...
 
 
-def getncfiles():
+def getncfiles(rawdir=FCOVERDIR):
     """ GETNCFILES - Récupération sous la forme d'une table (FILE, REVISION) 
         indexée par la date des fichiers .nc.
 
@@ -48,7 +48,7 @@ class Ocli(GeoZone):
 
         On va aussi compléter la méthode système d'affichage __repr__ pour différentier de la classe de base (testez pour voir sans cette méthode).
     """
-    def __init__(self, geomap="map.geojson"):
+    def __init__(self, rawdir=FCOVERDIR, geomap="map.geojson"):
         """ Initialise la classe GeoZone, puis récupère la liste des fichiers.
         """
         super().__init__(geomap)
@@ -58,7 +58,8 @@ class Ocli(GeoZone):
         self.names = ...
 
         # Récupération de la liste des fichiers.
-        self.df = getncfiles()
+        self.rawdir = rawdir
+        self.df = getncfiles(rawdir)
         self.dates = ...
     
     def __repr__(self):

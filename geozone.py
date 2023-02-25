@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 GEOZONE - gestion des zones géographiques.
-
 @author: Jérôme Lacaille
 """
+
+__date__ = "2023-02-24"
+__version__ = '1.3'
 
 import os
 

@@ -136,3 +136,4 @@ dmypy.json
 SAFE/
 ZIP/
 FCOVER*OCLI*
+.DS_Store
